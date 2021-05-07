@@ -57,13 +57,10 @@ def rectangle(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
-
-    for count in range(2):
-        forward(end.x - start.x)
-        left(90)
-        forward(end.y - start.y)
-        left(90)
-
+    goto(end.x, start.y)
+    goto(end.x,end.y)
+    goto(start.x, end.y)
+    goto(start.x,start.y)
     end_fill()
     
     
@@ -74,11 +71,10 @@ def triangle(start, end):
     down()
     begin_fill()
     
-    for count in range(2):
+    for i in range(3):
         forward(end.x - start.x)
         left(120)
-    for count in range(2):
-        left(120)
+        
     end_fill()
     
 
